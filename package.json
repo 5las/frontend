@@ -1,0 +1,22 @@
+{
+  "name": "5las",
+  "version": "1.0.0",
+  "description": "App para apoyar la coyuntura del COVID-19, Las compras en los supermercados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5las/frontend.git"
+  },
+  "keywords": [
+    "5colas"
+  ],
+  "author": "Miguel Fuentes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5las/frontend/issues"
+  },
+  "homepage": "https://github.com/5las/frontend#readme"
+}

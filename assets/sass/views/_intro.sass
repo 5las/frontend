@@ -1,0 +1,49 @@
+.content_logo
+	position: relative
+	width: 326px
+	height: 326px
+	background: rgba(229, 26, 71, 1)
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0 auto
+	border-radius: 100%
+	margin-top: 200px
+	margin-bottom: 70px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		border-radius: 100%
+	&:before
+		width: 282px
+		height: 282px
+		background: rgba(231, 49, 89, 1)
+	&:after
+		width: 228px
+		height: 228px
+		background: rgba(234, 70, 105, 1)
+.logo_intro
+	width: 174px
+	height: 174px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: $blanco
+	border-radius: 100%
+	margin: 0 auto
+	z-index: 1	
+	img
+		max-width: 92px
+		height: auto
+.hashtag_covid19
+	color: $blanco
+	font-weight: 600
+	text-align: center
+	display: block
+	margin-top: 56px
+	margin-bottom: 50px
+
+@media screen and (max-width: 767px)
+	.content_logo
+		margin-top: 80px

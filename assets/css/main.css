@@ -1,0 +1,136 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper_container_app {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrapper_container_app.full {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper_container_app {
+    padding: 0 15px;
+  }
+}
+
+.bg_cherry {
+  background: #e20030;
+}
+
+.input__g {
+  text-align: left;
+  position: relative;
+}
+
+.btn_general {
+  max-width: 335px;
+  border-radius: 20px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  background: #e20030;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.btn_general:hover {
+  opacity: 0.8;
+}
+
+.btn_general.white {
+  background: #ffffff;
+  color: #e20030;
+}
+
+.content_logo {
+  position: relative;
+  width: 326px;
+  height: 326px;
+  background: #e51a47;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  border-radius: 100%;
+  margin-top: 200px;
+  margin-bottom: 70px;
+}
+
+.content_logo:before, .content_logo:after {
+  content: "";
+  position: absolute;
+  border-radius: 100%;
+}
+
+.content_logo:before {
+  width: 282px;
+  height: 282px;
+  background: #e73159;
+}
+
+.content_logo:after {
+  width: 228px;
+  height: 228px;
+  background: #ea4669;
+}
+
+.logo_intro {
+  width: 174px;
+  height: 174px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
+  border-radius: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.logo_intro img {
+  max-width: 92px;
+  height: auto;
+}
+
+.hashtag_covid19 {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  margin-top: 56px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .content_logo {
+    margin-top: 80px;
+  }
+}
