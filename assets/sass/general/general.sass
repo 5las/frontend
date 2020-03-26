@@ -1,6 +1,15 @@
+// ALIGN
+.align-left
+	text-align: left
+.align-right
+	text-align: right
+.align-center
+	text-align: center
+
+// BTNS
 .btn_general
-	max-width: 335px
-	border-radius: 20px
+	width: 100%
+	border-radius: $radius_20
 	height: 55px
 	line-height: 55px
 	text-align: center
@@ -11,9 +20,26 @@
 	font-size: 16px
 	text-transform: uppercase
 	text-decoration: none
-	transition: all 0.5s
+	transition: $transtion
+	border: none
+	cursor: pointer
 	&:hover
 		opacity: 0.8
 	&.white
 		background: $blanco
 		color: $cherry
+.margin_btn_login
+	margin: 27px 0
+//
+.label_text
+	color: $negro
+	a
+		text-decoration: none
+		color: $negro
+		transition: $transtion
+		&:hover
+			color: $cherry
+	.link_form
+		display: block
+		font-weight: 700
+		margin-top: 8px
