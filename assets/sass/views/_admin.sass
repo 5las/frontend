@@ -1,0 +1,274 @@
+.content_date_admin
+	background: $blanco
+	margin: 0 -20px
+	padding: 23px 20px
+	border-bottom-right-radius: 20px
+	border-bottom-left-radius: 20px
+	margin-bottom: 35px
+	.calendar_date
+		position: relative
+		color: #a4b3c1
+		text-align: center
+		display: flex
+		justify-content: center
+		line-height: 20px
+		letter-spacing: 2px
+		font-weight: 600
+		font-size: 16px
+		text-transform: uppercase
+		&:before
+			font-family: icomoon
+			content: "\e905"
+			color: $cherry
+			font-size: 23px
+			margin-right: 14px
+			font-weight: normal
+			line-height: 18px
+.widget_section_admin
+	h3
+		font-size: 18px
+		font-weight: 700
+		letter-spacing: 0.5px
+	.content_widget
+		background: $blanco
+		border-radius: $radius_20
+		padding: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 20px
+		&.transparent
+			background: none
+			display: block
+		&.no_padding_tb
+			padding-top: 0
+			padding-bottom: 0
+		&.no_padding_lr
+			padding-left: 0
+			padding-right: 0
+		&.no_padding
+			padding: 0
+		&.block_rows
+			display: block
+			text-align: center
+			padding-top: 50px
+			padding-bottom: 50px
+			i
+				margin: 0 auto
+				display: block
+			.widget_hour 
+				display: block
+		.line_row
+			display: block
+			font-size: 16px
+			font-weight: 500
+			margin-bottom: 5px
+		.widget_turn
+			font-size: 18px
+			font-weight: 700
+			letter-spacing: 0.5px
+		.widget_hour
+			text-align: center
+			margin: 10px 0
+			.font_55
+				font-weight: 700
+				font-size: 55px
+				&.minutes
+					&:before,
+					&:after
+						content: ":"
+						margin: 0 4px
+			.font_12
+				font-size: 12px
+				letter-spacing: 0.5px
+				display: block
+			.font_18
+				font-size: 18px
+				font-weight: 700
+		i
+			font-size: 55px
+			color: $cherry
+		.separate_icon_text
+			height: 90px
+			width: 1px
+			background: #a4b3c1
+			margin: 0 30px
+.link_pages_admin
+	text-decoration: underline
+	color: $cherry
+	font-size: 16px
+	letter-spacing: 0.5px
+	display: block
+
+// TABS
+
+.tab_nav_link
+	display: flex
+	justify-content: center
+	margin: 25px 0
+.tab_link
+	font-size: 16px
+	line-height: 25px
+	color: $negro
+	text-decoration: none
+	transition: $transtion
+	margin: 0 20px
+	padding: 14px 18px
+	font-weight: 600
+	position: relative
+	text-align: center
+	&:before
+		content: ""
+		height: 4px
+		width: 0
+		bottom: 0
+		background: $cherry
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		border-radius: 6px
+		transition: $transtion
+.tab_link.is-active,
+.tab_link:hover
+	color: $cherry
+	&:before
+		width: 100%
+.tab_content
+	display: none
+.tab_content.is-active
+	display: block
+
+.row_title_icon
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+	margin: 20px 0
+	h3
+		margin-bottom: 0
+	.icon_circle
+		width: 44px
+		height: 44px
+		background: $cherry
+		border-radius: 100%
+		color: $blanco
+		text-decoration: none
+		font-size: 16px
+		text-align: center
+		i
+			line-height: 44px
+
+/* Color Icnos */
+.icon_red
+	i
+		color: $cherry
+
+.no_flex
+	display: block !important
+
+.list_turnos
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		border-bottom: solid 1px #c1d0de
+		padding: 10px 0
+		flex-wrap: wrap
+		justify-content: space-between
+		&:last-child
+			border: none
+		.row_field
+			margin-bottom: 0
+		input
+			max-width: 98px
+			margin-bottom: 0
+			text-align: center
+			margin-right: 14px
+		a
+			text-decoration: none
+			i
+				font-size: 20px !important
+		span
+			padding: 0 14px
+.content_info_total
+	justify-content: space-between
+	span
+		width: 50%
+		display: block
+		text-align: center
+		font-size: 16px
+		flex-basis: 500px
+		min-height: 55px
+		line-height: 55px
+		&.count
+			background: $blanco
+			border-radius: 10px
+
+/* MENU ADMIN */
+
+.content_elements_sidebar_admin
+	padding: 20px
+.widget_menu_admin
+	position: absolute
+	top: 0px
+	left: -100%
+	height: 100%
+	width: 316px
+	transition: $transtion
+	background: $blanco
+	&.active
+		left: 0
+.header_panel_admin
+	height: 50px
+	display: flex
+	align-items: center
+	.menu_admin
+		font-size: 30px
+		color: $cherry
+.content_panel_admin
+	h3
+		font-size: 25px	
+		line-height: 26px
+		font-weight: 700
+		margin: 30px 0
+	.title_icon_section_panel
+		display: flex
+		align-items: center
+		padding-top: 18px
+		padding-bottom: 18px
+		padding-left: 40px
+		position: relative
+		.title
+			font-size: 16px
+			font-weight: 600
+			a
+				color: $negro
+				text-decoration: none
+		[class^="icon-"]
+			font-size: 18px
+			color: $cherry
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+	.content_section_panel
+		padding-left: 40px
+		ul
+			list-style: none
+			margin: 0
+			padding: 40px 0
+			border-top: solid 1px #c1d0de
+			border-bottom: solid 1px #c1d0de
+			li
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
+				a
+					font-size: 16px
+					color: #a4b3c1
+					text-decoration: none
+					transition: $transtion
+					&:hover
+						color: $negro
+body.active
+	overflow: hidden

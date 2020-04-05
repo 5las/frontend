@@ -4,6 +4,11 @@ textarea
 	font-family: $Montserrat
 	font-size: 16px
 	font-weight: 500
+	appearance: none
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button
+  appearance: none
+  margin: 0
 
 .input__g
 	text-align: left
@@ -18,5 +23,46 @@ textarea
 	&:focus,
 		background: $blanco
 		border: solid 1px $cherry
+	&.bg_white
+		background: $blanco
+		
 .row_field
 	margin-bottom: 20px
+	&.select,
+	&.search,
+	&.data
+		position: relative
+		&:after
+			font-family: icomoon
+			position: absolute
+			right: 20px
+			top: 50%
+			transform: translateY(-50%)
+			color: $cherry
+			pointer-events: none
+	&.select
+		&:after
+			content: "\e90f"
+	&.search
+		&:after
+			content: "\e90e"
+			font-size: 24px
+	&.data
+		&:after
+			content: "\e906"
+			font-size: 18px
+		.input__g
+			border: solid 1px $cherry
+			background: $blanco
+.icon_register
+	position: relative
+	[class^="icon-"]
+		color: #a4b3c1
+		font-size: 18px
+		position: absolute
+		top: 50%
+		transform: translatey(-50%)
+		z-index: 1
+		left: 23px
+	.input__g
+		padding-left: 60px

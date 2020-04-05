@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>5las - Admin</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+</head>
+<body class="bg_gray">
+	<div class="wrapper_container_app">
+		<header class="wrapper_header_app">
+			<span class="icon-menu menu_admin"></span>
+			<div class="info_store">
+				<h1>Metro Barranco</h1>
+				<h2>Av. Grau 513</h2>
+			</div>
+		</header>
+		<section class="section_panel_admin">
+			<div class="content_date_admin">
+				<span class="calendar_date">Dom 05 Abr 2020</span>
+			</div>
+			<div class="widget_section_admin">
+				<h3>Turno</h3>
+				<div class="content_widget">
+					<span class="widget_turn">15:00 - 16:30</span>
+				</div>
+			</div>
+			<div class="widget_section_admin">
+				<h3>Queda</h3>
+				<div class="content_widget hours" id="countdownTimer">
+					<span class="widget_hour">
+						<span class="font_55 hours">00</span>
+						<span class="font_12">Horas</span>
+					</span>
+					<span class="widget_hour">
+						<span class="font_55 minutes">00</span>
+						<span class="font_12">Minutos</span>
+					</span>
+					<span class="widget_hour">
+						<span class="font_55 seconds">00</span>
+						<span class="font_12">Segundos</span>
+					</span>
+				</div>
+			</div>
+			<div class="widget_section_admin">
+				<h3>En este turno hay</h3>
+				<div class="content_widget">
+					<i class="icon-customer"></i>
+					<span class="separate_icon_text"></span>
+					<span class="widget_hour ">
+						<span class="font_55">23</span>
+						<span class="font_12">Personas</span>
+					</span>
+				</div>
+			</div>
+			<a href="#loadQR" class="btn_general margin_buttom_20">Escanear codigo</a>
+			<a href="horarios.html" class="link_pages_admin align-center">Ver Horarios y Estadísticas</a>
+		</section>
+	</div>
+
+<script>
+	function getTimeRemaining(endtime) {
+	  var t = Date.parse(endtime) - Date.parse(new Date());
+	  var seconds = Math.floor((t / 1000) % 60);
+	  var minutes = Math.floor((t / 1000 / 60) % 60);
+	  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+	  return {
+	    'total': t,
+	    'hours': hours,
+	    'minutes': minutes,
+	    'seconds': seconds
+	  };
+	}
+
+	function initializeClock(id, endtime) {
+	  var clock = document.getElementById(id);
+	  var hoursSpan = clock.querySelector('.hours');
+	  var minutesSpan = clock.querySelector('.minutes');
+	  var secondsSpan = clock.querySelector('.seconds');
+
+	  function updateClock() {
+	    var t = getTimeRemaining(endtime);
+
+	    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+	    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+	    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+	    if (t.total <= 0) {
+	      clearInterval(timeinterval);
+	    }
+	  }
+
+	  updateClock();
+	  var timeinterval = setInterval(updateClock, 1000);
+	}
+
+	var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+	initializeClock('countdownTimer', deadline);
+</script>
+
+</body>
+</html>
